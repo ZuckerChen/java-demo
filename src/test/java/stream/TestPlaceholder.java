@@ -1,9 +1,0 @@
-package stream;
-
-/**
- * Description:
- *
- * @version 1.0 2017/12/15 下午2:20 by zucker
- */
-public class TestPlaceholder {
-}
