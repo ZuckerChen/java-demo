@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author: Zucker
@@ -70,13 +72,12 @@ public class ZeroCopy {
      * @param file
      */
     public static void fileReadMmap(File file) {
-
+        List list = new ArrayList();
         long l = System.currentTimeMillis();
         byte[] buf = new byte[BUFFER_SIZE];
         try (FileChannel fileChannel = new FileInputStream(file).getChannel()) {
             int len = (int) file.length();
             MappedByteBuffer byteBuffer = fileChannel.map(FileChannel.MapMode.READ_ONLY, 0, fileChannel.size());
-
             for (int offset = 0; offset < fileChannel.size(); offset += BUFFER_SIZE) {
                 if (len - offset > BUFFER_SIZE) {
                     byteBuffer.get(buf);
