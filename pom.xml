@@ -16,6 +16,7 @@
         <module>distributed-transaction</module>
         <module>zookeeper</module>
         <module>rpc</module>
+        <module>jdbctranslocal</module>
     </modules>
 
     <properties>
@@ -87,7 +88,16 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.19</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.68</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
 
     <build>

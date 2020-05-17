@@ -157,7 +157,6 @@ public class BinaryTree {
             }
             if (!stack.empty()) {
                 node = stack.pop();
-                ;
                 System.out.print(node.data + " ");
                 node = node.rightLeaf;
             }

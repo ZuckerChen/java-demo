@@ -33,12 +33,7 @@ public class TrapRain {
                     }
                 }
                 //计算沟壑储水量
-
-
-
             }
-
-
         }
 
         return res;
